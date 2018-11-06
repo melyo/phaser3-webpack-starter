@@ -1,6 +1,7 @@
+import { Scene } from 'phaser'
 import phaserLogo from '../assets/logo.png'
 
-class SampleScene extends Phaser.Scene {
+class SampleScene extends Scene {
     constructor() {
         super({
             key: 'SampleScene'
@@ -8,11 +9,11 @@ class SampleScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('logo', phaserLogo);
+        this.load.image('logo', phaserLogo)
     }
 
     create() {
-        const logo = this.add.image(400, 150, 'logo');
+        const logo = this.add.image(400, 150, 'logo')
 
         this.tweens.add({
             targets: logo,
@@ -21,7 +22,7 @@ class SampleScene extends Phaser.Scene {
             ease: 'Power2',
             yoyo: true,
             loop: -1
-        });
+        })
     }
 }
 

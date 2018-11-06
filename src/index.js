@@ -1,14 +1,18 @@
-import 'phaser'
+import { AUTO, Game } from 'phaser'
 import SampleScene from './scene/sample'
 
 const config = {
-    type: Phaser.AUTO,
-    parent: 'phaser-example',
-    width: 800,
+    title: 'Sample Game',
+    parent: 'sample game',
+    version: '1.0',
+
+    width: 1000,
     height: 600,
-    scene: [SampleScene]
-};
+    type: AUTO,
+
+    scene: [ SampleScene ]
+}
 
 window.onload = () => {
-    new Phaser.Game(config)
+    new Game(config)
 }
